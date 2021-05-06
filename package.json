@@ -1,7 +1,7 @@
 {
-  "name": "ncat",
+  "name": "@flemist/ncat",
   "description": "Node CLI to concatenate multiple files, with their sourcemaps and optionally stdin, a banner and a footer",
-  "version": "0.0.0-development",
+  "version": "4.0.2",
   "author": "Pierre Vanduynslager",
   "ava": {
     "helpers": [
@@ -96,6 +96,8 @@
   },
   "xo": {
     "prettier": true,
-    "ignore": ["test/fixtures/**"]
+    "ignore": [
+      "test/fixtures/**"
+    ]
   }
 }

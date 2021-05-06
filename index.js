@@ -167,15 +167,6 @@ async function concatFiles() {
 	const globs = await Promise.all(argv._.map(handleGlob));
 	const files = globs.reduce((acc, cur) => acc.concat(cur), []);
 
-	if (
-		(files.length < 2 && typeof argv.banner === 'undefined' && !argv.footer) ||
-		(files.length === 0 && (typeof argv.banner === 'undefined' || !argv.footer))
-	) {
-		throw new Error(
-			chalk.bold.red(`Require at least 2 file, banner or footer to concatenate. ("ncat --help" for help)${EOL}`)
-		);
-	}
-
 	return files.forEach(file => {
 		concat.add(file.file, file.content, file.map);
 	});
